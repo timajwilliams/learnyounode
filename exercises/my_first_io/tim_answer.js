@@ -1,7 +1,6 @@
 var fs = require('fs')
 var file = (process.argv[2])
 var buffer = fs.readFileSync(file)
-var str =  buffer.toString()
-var array = Number(str.split("\n"))
-var lines = Number(array.length - 1)
+ 
+var lines = buffer.toString().split("\n").length - 1
 console.log(lines)
